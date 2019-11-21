@@ -21,5 +21,12 @@
     <% } else { %>
         <h3> SUCCESS </h3>
     <% } %>    
+
+    <% products.forEach( function(product) {%>
+        <hr>
+        <h3><%= product.name %></h3>
+        <h4><%= product.price %></h4>
+    <% }); %>        
+
 </body>
 </html>
