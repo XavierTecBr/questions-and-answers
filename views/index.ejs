@@ -16,5 +16,10 @@
     <p>Company Name: <%= companyName %> </p>
     <p>Total of Clients: <%= totalOfClients %> </p>
 
+    <% if(showError) {%>
+        <h3> OPS! </h3>
+    <% } else { %>
+        <h3> SUCCESS </h3>
+    <% } %>    
 </body>
 </html>
