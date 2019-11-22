@@ -6,30 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Any Questions</h1>
-    <hr>
-    <h3>Question list</h3>
-
-    <img src="/img/nodejs.png" alt="Image with ejs">    
-
-    <p>Name: <%= name %> </p>
-    <p>Language: <%= lang %> </p>
-    <p>Company Name: <%= companyName %> </p>
-    <p>Total of Clients: <%= totalOfClients %> </p>
-
-    <% if(showError) {%>
-        <h3> OPS! </h3>
-    <% } else { %>
-        <h3> SUCCESS </h3>
-    <% } %>    
-
-    <% products.forEach( function(product) {%>
-        <hr>
-        <h3><%= product.name %></h3>
-        <h4><%= product.price %></h4>
-    <% }); %>       
-
+    <h1>Bootstrap has Installed</h1>
 </body>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="/js/bootstrap.min.js"></script>
 </html>
