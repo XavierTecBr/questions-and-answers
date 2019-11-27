@@ -8,4 +8,8 @@ app.get("/", (req, res) => {
     res.render("index", {});
 });
 
+app.get('/ask', (req, res) => {
+    res.render("ask", {});
+})
+
 app.listen(8080,()=>{console.log("Server is ok.");});
