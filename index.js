@@ -2,7 +2,7 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const connection = require("./database/database");
-const askModel = require("./database/Ask");
+const Ask = require("./database/Ask");
 
 connection
     .authenticate()
@@ -30,7 +30,13 @@ app.get('/ask', (req, res) => {
 app.post('/ask', (req, res) => {
     let title = req.body.title;
     let description = req.body.description;
-    res.send("Form has been recieved: Title " + title + " Description " + description);
+
+    Ask.create({
+        title: title,
+        description: description
+    }).then(() => {
+        res.send("Form has been recieved: Title " + title + " Description " + description);
+    })
 })
 
 app.listen(8080,()=>{console.log("Server is ok.");});

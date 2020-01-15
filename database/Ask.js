@@ -13,3 +13,5 @@ const ask = connection.define('ask', {
 });
 
 ask.sync({force: false}).then(() => {console.log('ask table crated')});
+
+module.exports = ask;
