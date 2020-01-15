@@ -20,7 +20,10 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json());
 
 app.get("/", (req, res) => {
-    res.render("index", {});
+    Ask.findAll({ raw: true}).then( asks => 
+        {
+            res.render("index", {asks: asks});
+        });
 });
 
 app.get('/ask', (req, res) => {
